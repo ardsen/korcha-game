@@ -1,0 +1,525 @@
+.statisticsWrapper {
+  height: 100%;
+  width: 50%;
+}
+.statsContainer {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.remainStats {
+  color: var(--color-burgundy-dark);
+  font-size: 24px;
+  text-align: center;
+  text-shadow: 0 0 2px var(--color-burgundy-light);
+  margin-bottom: 10px;
+}
+.remainStats input {
+  color: var(--color-burgundy-dark);
+  background: none;
+  border: none;
+  width: min-content;
+  font-size: 24px;
+  width: 30px;
+  text-decoration: none;
+  pointer-events: none;
+  text-shadow: 0 0 2px var(--color-burgundy-light);
+}
+.statsConfirmButton {
+  padding: 0.4rem 0.6rem;
+  font-size: 18px;
+  /* border: none; */
+  background-color: var(--color-burgundy-dark);
+  color: var(--color-text);
+  cursor: pointer;
+  margin-top: 15px;
+}
+.statisticsContainer {
+  padding: 1rem;
+  padding-top: 0;
+  width: 100%;
+  height: 40%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 700;
+  color: var(--color-burgundy-dark);
+  text-shadow: 1px 1px 5px white;
+}
+.statisticsContainer p {
+  font-weight: 600;
+}
+.inventoryWrapper {
+  height: 100%;
+  width: 62%;
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.inventoryTopic {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-burgundy-dark);
+}
+.inventoryContainer {
+  padding: 2rem 2rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 30px;
+  background-image: url(/inventory-bg-horizontal.png);
+  background-size: cover;
+  box-shadow: 0 0 10px 2px black;
+  border-radius: 10px;
+}
+
+.itemInd {
+  width: 4.2rem;
+  height: 4.2rem;
+  background: radial-gradient(circle at center, white 0%, black 100%);
+  border-radius: 5px;
+  box-shadow: 0 0 5px 1px black;
+  border: 2px black solid;
+  cursor: pointer;
+}
+
+.itemDetails {
+  color: var(--color-burgundy-dark);
+  min-width: 27rem;
+  background-image: url(/parchment-bg3.png);
+  padding: 1rem;
+  z-index: 100;
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  border-radius: 0 10px 10px 10px;
+}
+.itemDetails p {
+  font-weight: 600;
+}
+.itemDetailsMagicShop {
+  color: var(--color-burgundy-dark);
+  min-width: 30rem;
+  background-image: url(/parchment-bg3.png);
+  padding: 1rem;
+  z-index: 100;
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  border-radius: 0 10px 10px 10px;
+}
+.itemDetailsMagicShop p {
+  font-weight: 600;
+}
+
+.itemDetailsMagicShop img {
+  max-width: 100%;
+}
+.itemDetailsMagicShop h3 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.itemIndCommon {
+  width: 4.2rem;
+  height: 4.2rem;
+  background: radial-gradient(
+    circle at center,
+    rgb(122, 221, 122) 0%,
+    black 100%
+  );
+  border-radius: 5px;
+  box-shadow: 0 0 5px 1px black;
+  border: 2px black solid;
+  /* cursor: pointer; */
+}
+.itemIndCommon:hover {
+  transform: scale(0.95);
+  transition: all 0.2s;
+}
+
+.itemIndRare {
+  width: 4.2rem;
+  height: 4.2rem;
+  background: radial-gradient(
+    circle at center,
+    rgb(25, 151, 219) 0%,
+    black 100%
+  );
+  border-radius: 5px;
+  box-shadow: 0 0 5px 1px black;
+  border: 2px black solid;
+  /* cursor: pointer; */
+}
+.itemIndRare:hover {
+  transform: scale(0.95);
+  transition: all 0.2s;
+}
+
+.itemIndEpic {
+  width: 4.2rem;
+  height: 4.2rem;
+  background: radial-gradient(
+    circle at center,
+    rgb(133, 35, 169) 0%,
+    black 100%
+  );
+  border-radius: 5px;
+  box-shadow: 0 0 5px 1px black;
+  border: 2px black solid;
+  /* cursor: pointer; */
+}
+.itemIndEpic:hover {
+  transform: scale(0.95);
+  transition: all 0.2s;
+}
+
+.itemIndUnique {
+  width: 4.2rem;
+  height: 4.2rem;
+  background: radial-gradient(
+    circle at center,
+    rgb(253, 56, 56) 0%,
+    black 100%
+  );
+  border-radius: 5px;
+  box-shadow: 0 0 5px 1px black;
+  border: 2px black solid;
+  /* cursor: pointer; */
+}
+.itemIndUnique:hover {
+  transform: scale(0.95);
+  transition: all 0.2s;
+}
+.itemIndEmpty {
+  width: 4.2rem;
+  height: 4.2rem;
+  background: radial-gradient(
+    circle at center,
+    rgb(181, 180, 180) 0%,
+    black 100%
+  );
+  border-radius: 5px;
+  box-shadow: 0 0 5px 1px black;
+  border: 2px black solid;
+  /* cursor: pointer; */
+}
+.itemIndEmpty:hover {
+  transform: scale(0.95);
+  transition: all 0.2s;
+}
+.itemDetailsEmpty {
+  text-align: center;
+  color: rgb(80, 80, 80);
+  text-shadow: 1px 1px 5px white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.itemIndMerchandise {
+  width: 4.2rem;
+  height: 4.2rem;
+  background: radial-gradient(
+    circle at center,
+    rgb(219, 219, 79) 0%,
+    black 100%
+  );
+  border-radius: 5px;
+  box-shadow: 0 0 5px 1px black;
+  border: 2px black solid;
+  /* cursor: pointer; */
+}
+.itemIndMerchandise:hover {
+  transform: scale(0.95);
+  transition: all 0.2s;
+}
+.itemIndMagic {
+  width: 4.2rem;
+  height: 4.2rem;
+  background: radial-gradient(
+    circle at center,
+    rgb(207, 79, 219) 0%,
+    black 100%
+  );
+  border-radius: 5px;
+  box-shadow: 0 0 5px 1px black;
+  border: 2px black solid;
+  /* cursor: pointer; */
+}
+.itemIndMagic:hover {
+  transform: scale(0.95);
+  transition: all 0.2s;
+}
+.indImg {
+  width: 100%;
+  cursor: pointer;
+}
+.indImg:hover {
+  transform: scale(1.1);
+  transition: all 0.2s;
+}
+.shopInventory {
+  background-image: url(/inventory-bg-vertical.png);
+  background-size: cover;
+  height: 48%;
+  width: 100%;
+  border-radius: 0 0 20px 20px;
+  position: relative;
+  /* opacity: 0.9; */
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 35px;
+  padding: 2rem 3rem;
+}
+.itemDetails h3 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.itemDetailsMerchandise {
+  color: var(--color-burgundy-dark);
+  width: 19rem;
+  background-image: url(/parchment-bg3.png);
+  padding: 1rem;
+  z-index: 100;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0 10px 10px 10px;
+}
+.itemDetailsMerchandise h3 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.itemDetailsMerchandise img {
+  max-width: 100%;
+}
+.itemDetails img {
+  max-width: 100%;
+}
+.itemImg {
+  width: 45%;
+  align-content: center;
+}
+.itemInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 52%;
+  position: relative;
+}
+.itemBought {
+  position: absolute;
+  display: flex;
+
+  padding: 0.2rem 0.4rem;
+  border-radius: 10px;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--color-text);
+  text-align: center;
+}
+
+.itemDetailsCommon {
+  text-align: center;
+  color: rgb(26, 141, 26);
+  text-shadow: 1px 1px 5px white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.itemDetailsRare {
+  text-align: center;
+  color: rgb(25, 151, 219);
+  text-shadow: 1px 1px 5px white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.itemDetailsEpic {
+  text-align: center;
+  color: rgb(133, 35, 169);
+  text-shadow: 1px 1px 5px white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.itemDetailsUnique {
+  text-align: center;
+  color: rgb(212, 7, 7);
+  text-shadow: 1px 1px 5px white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.itemPriceOk {
+  text-align: end;
+}
+.itemPriceOk span {
+  color: rgb(26, 141, 26);
+  text-shadow: 1px 1px 5px white;
+}
+.itemPriceNot {
+  text-align: end;
+}
+.itemPriceNot span {
+  color: rgb(179, 8, 8);
+  text-shadow: 1px 1px 5px white;
+}
+.requiredLevelNot {
+  color: rgb(179, 8, 8);
+  text-shadow: 1px 1px 5px white;
+}
+.requiredLevelOk {
+  color: rgb(26, 141, 26);
+  text-shadow: 1px 1px 5px white;
+}
+.shopBuyButton {
+  background-color: var(--color-burgundy-dark);
+  cursor: pointer;
+  color: var(--color-text);
+  font-size: 24px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+.shopBuyButtonNot {
+  pointer-events: none;
+  background-color: var(--color-burgundy-dark);
+  opacity: 0.6;
+  color: var(--color-text);
+  font-size: 18px;
+  margin-top: 10px;
+  height: 1.9rem;
+  border: none;
+  border-radius: 10px;
+}
+.equippedItemCont {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  position: relative;
+  gap: 2rem;
+  z-index: 1;
+  justify-content: center;
+}
+.equippedItemSlot {
+  flex-direction: column;
+  display: flex;
+  width: 4.2rem;
+  height: 4.2rem;
+  border: 6px var(--color-burgundy-light);
+  border-style: ridge;
+  z-index: 1;
+  background-color: black;
+  opacity: 0.6;
+  position: relative;
+}
+.itemDetailsEquipped {
+  color: var(--color-burgundy-dark);
+  min-width: 12rem;
+  background-image: url(/parchment-bg3.png);
+  padding: 1rem;
+  z-index: 100;
+  position: relative;
+  display: flex;
+  gap: 10px;
+  border-radius: 0 10px 10px 10px;
+  align-items: center;
+  flex-direction: column;
+}
+.itemDetailsEquippedArmor {
+  color: var(--color-burgundy-dark);
+  min-width: 12rem;
+  background-image: url(/parchment-bg3.png);
+  padding: 1rem;
+  z-index: 100;
+  position: relative;
+  display: flex;
+  gap: 10px;
+  border-radius: 0 10px 10px 10px;
+  align-items: center;
+  flex-direction: column;
+}
+.avatarCont {
+  text-align: end;
+  width: 42%;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 1600px) {
+  .statsContainer {
+    gap: 0.4rem;
+  }
+  .statisticsContainer {
+    font-size: 14px;
+  }
+  .shopInventory {
+    padding: 0.5rem;
+    gap: 1.5rem;
+  }
+  .itemDetails {
+    padding: 0.3rem;
+    gap: 1rem;
+    font-size: 14px;
+  }
+  .itemIndCommon,
+  .itemIndRare,
+  .itemIndEpic,
+  .itemIndUnique,
+  .itemIndEmpty,
+  .itemDetailsEmpty,
+  .itemIndMerchandise,
+  .itemIndMagic {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .inventoryWrapper {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .inventoryWrapper {
+    width: 100%;
+    height: 80%;
+    padding: 1rem;
+  }
+  .avatarImg {
+    display: none;
+  }
+  .avatarCont {
+    width: 20%;
+  }
+  .equippedItemCont {
+    flex-direction: row;
+    position: relative;
+  }
+  .equippedItemCont::before {
+    content: "Equipped Items";
+    position: absolute;
+    left: -16rem;
+    top: 1.5rem;
+    color: var(--color-burgundy-dark);
+    font-weight: 600;
+    font-size: 20px;
+  }
+  .statisticsWrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  .statisticsContainer {
+    padding: 0;
+    height: 50%;
+  }
+}

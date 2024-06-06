@@ -1,0 +1,168 @@
+.gameContent {
+  height: 100%;
+  width: 100%;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+}
+.elderPageWrapper {
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 20px;
+  opacity: 0.9;
+  position: relative;
+}
+/* .elderPageWrapper::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  top: 0;
+  lef
+} */
+.elderPageImg {
+  height: 50%;
+  width: 100%;
+  /* background-image: url("/elder.png"); */
+  background-size: cover;
+  border-radius: 20px 20px 5px 5px;
+}
+.merchantPageImg {
+  height: 50%;
+  width: 100%;
+  background-size: cover;
+  border-radius: 20px 20px 5px 5px;
+}
+.blacksmithPageImg {
+  height: 50%;
+  width: 100%;
+  /* background-image: url("/blacksmith.jpg"); */
+  background-size: cover;
+  border-radius: 20px 20px 0 0;
+}
+.magicShopImg {
+  height: 50%;
+  width: 100%;
+  /* background-image: url("/magicshop.jpg"); */
+  background-size: cover;
+  border-radius: 20px 20px 5px 5px;
+}
+.armorShopImg {
+  height: 50%;
+  width: 100%;
+  /* background-image: url("/armorshop.jpg"); */
+  background-size: cover;
+  border-radius: 20px 20px 5px 5px;
+}
+.equippedItemCont {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  position: relative;
+  gap: 2rem;
+  z-index: 1;
+}
+.equippedItemSlot {
+  width: 4.2rem;
+  height: 4.2rem;
+  border: 6px var(--color-burgundy-light);
+  border-style: ridge;
+  z-index: -10;
+  background-color: black;
+  opacity: 0.6;
+  position: relative;
+}
+.itemInd {
+  width: 4.2rem;
+  height: 4.2rem;
+  background: radial-gradient(circle at center, white 0%, black 100%);
+  border-radius: 5px;
+  box-shadow: 0 0 5px 1px black;
+  border: 2px black solid;
+  cursor: pointer;
+}
+.statReminder {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(133, 1, 1);
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: 13px;
+  font-size: 15px;
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.statReminder:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+.statReminder:hover::after {
+  content: "You have stat points to distribute!";
+  position: absolute;
+  top: 25px;
+  width: 12rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid var(--color-text);
+}
+.overlayUnderDev {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  border-radius: 30px;
+  z-index: 100;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.overlayUnderDev p {
+  font-size: 32px;
+  color: var(--color-text);
+  text-shadow: 1px 1px 5px white;
+}
+.loading {
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 3px black dotted;
+}
+.animationLoading {
+  animation: loading 5s infinite;
+  animation-timing-function: linear;
+}
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 1600px) {
+  .elderPageWrapper {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .gameContent {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}

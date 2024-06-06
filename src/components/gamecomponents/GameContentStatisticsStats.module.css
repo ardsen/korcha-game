@@ -1,0 +1,41 @@
+.individualStatContainer {
+  width: 11rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.individualStatContainer label {
+  font-size: 24px;
+}
+.individualStatContainer input {
+  text-decoration: none;
+  pointer-events: none;
+  background: none;
+  border: none;
+  height: 100%;
+  font-size: 24px;
+  width: 2rem;
+  text-align: center;
+  color: var(--color-burgundy-dark);
+  text-shadow: 0 0 2px var(--color-burgundy-light);
+}
+
+.individualStatContainer button {
+  font-size: 24px;
+  border: none;
+  background-color: var(--color-burgundy-dark);
+  color: var(--color-text);
+  padding: 0 0.4rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.individualStatContainer button:hover {
+  box-shadow: 0 0 5px 1px var(--color-burgundy-dark);
+}
+.inputContainer {
+  display: inline-block;
+  text-align: center;
+  height: 100%;
+  padding: 0.1rem 0.4rem;
+  color: var(--color-burgundy-dark);
+  text-shadow: 0 0 2px var(--color-burgundy-light);
+}

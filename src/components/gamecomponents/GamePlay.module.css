@@ -1,0 +1,1174 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Jaini+Purva&family=Jersey+25&family=PT+Mono&display=swap");
+.firstMapContainer {
+  width: 100%;
+  height: 100%;
+  /* background-color: aliceblue; */
+  border-radius: 30px;
+}
+.firstMap {
+  width: 100%;
+  height: 100%;
+  background-image: url("firstmap.png");
+  border-radius: 30px;
+  border: black 10px;
+  border-style: outset;
+  background-size: cover;
+  position: relative;
+}
+.secondMap {
+  width: 100%;
+  height: 100%;
+  background-image: url("secondmap.png");
+  border-radius: 30px;
+  border: black 10px;
+  border-style: outset;
+  background-size: cover;
+  position: relative;
+}
+.enemyCont {
+  bottom: 18%;
+  left: 12%;
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  background-image: url("/direwolf.png");
+  background-size: cover;
+  cursor: pointer;
+}
+.enemyCont:hover {
+  transform: scale(1.2);
+  transition: all 0.2s;
+}
+.enemyCont:hover::after {
+  content: "Direwolf Recommended lvl: 1";
+  position: absolute;
+  width: 11rem;
+  bottom: -2.3rem;
+  left: -2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+  color: var(--color-text);
+  font-weight: 600;
+  text-align: center;
+}
+.enemyContApe {
+  bottom: 36%;
+  left: 30%;
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  background-image: url("/youngape.png");
+  background-size: cover;
+  cursor: pointer;
+}
+.enemyContApe:hover {
+  transform: scale(1.2);
+  transition: all 0.2s;
+}
+.enemyContApe:hover::after {
+  content: "Young Ape Recommended lvl: 1-2";
+  position: absolute;
+  width: 12rem;
+  bottom: -2.3rem;
+  left: -3rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+  color: var(--color-text);
+  font-weight: 600;
+  text-align: center;
+}
+.enemyContLion {
+  bottom: 50%;
+  left: 10%;
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  background-image: url("/whitelion.png");
+  background-size: cover;
+  cursor: pointer;
+}
+.enemyContLion:hover {
+  transform: scale(1.2);
+  transition: all 0.2s;
+}
+.enemyContLion:hover::after {
+  content: "White Lion Recommended lvl: 2-3";
+  position: absolute;
+  width: 12rem;
+  bottom: -2.3rem;
+  left: -3rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+  color: var(--color-text);
+  font-weight: 600;
+  text-align: center;
+}
+.enemyContBarbarian {
+  top: 30%;
+  left: 40%;
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  background-image: url("/barbarian.png");
+  background-size: cover;
+  cursor: pointer;
+}
+.enemyContBarbarian:hover {
+  transform: scale(1.2);
+  transition: all 0.2s;
+}
+.enemyContBarbarian:hover::after {
+  content: "Barbarian Recommended lvl: 4";
+  position: absolute;
+  width: 12rem;
+  bottom: -2.3rem;
+  left: -3rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+
+  padding: 0.2rem 0.4rem;
+  color: var(--color-text);
+  font-weight: 600;
+  text-align: center;
+}
+.enemyContIronclad {
+  top: 8%;
+  left: 45%;
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  background-image: url("/ironcladmarauder.png");
+  background-size: cover;
+  cursor: pointer;
+}
+.enemyContIronclad:hover {
+  transform: scale(1.2);
+  transition: all 0.2s;
+}
+.enemyContIronclad:hover::after {
+  content: "Ironclad Marauder Recommended lvl: 5";
+  position: absolute;
+  bottom: -2.3rem;
+  left: -3rem;
+  width: 12rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+  color: var(--color-text);
+  font-weight: 600;
+  text-align: center;
+}
+.enemyContCorruptedOrc {
+  top: 4%;
+  right: 25%;
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  background-image: url("/corruptedorc.png");
+  background-size: cover;
+  cursor: pointer;
+}
+.enemyContCorruptedOrc:hover {
+  transform: scale(1.2);
+  transition: all 0.2s;
+}
+.enemyContCorruptedOrc:hover::after {
+  content: "Corrupted Orc Recommended lvl: 6";
+  position: absolute;
+  bottom: -2.3rem;
+  left: -3rem;
+  width: 12rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+  color: var(--color-text);
+  font-weight: 600;
+  text-align: center;
+}
+.enemyContRoguePaladin {
+  top: 20%;
+  right: 24%;
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  background-image: url("/roguepaladin.png");
+  background-size: cover;
+  cursor: pointer;
+}
+.enemyContRoguePaladin:hover {
+  transform: scale(1.2);
+  transition: all 0.2s;
+}
+.enemyContRoguePaladin:hover::after {
+  content: "Rogue Paladin Recommended lvl: 6";
+  position: absolute;
+  bottom: -2.3rem;
+  left: -3rem;
+  width: 12rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+  color: var(--color-text);
+  font-weight: 600;
+  text-align: center;
+}
+.enemyContDesertMonster {
+  top: 23%;
+  right: 5%;
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  background-image: url("/desertmonster.png");
+  background-size: cover;
+  cursor: pointer;
+}
+.enemyContDesertMonster:hover {
+  transform: scale(1.2);
+  transition: all 0.2s;
+}
+.enemyContDesertMonster:hover::after {
+  content: "Desert Monster Recommended lvl: 7";
+  position: absolute;
+  bottom: -2.3rem;
+  left: -3rem;
+  width: 12rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+  color: var(--color-text);
+  font-weight: 600;
+  text-align: center;
+}
+.enemyContKingsHand {
+  top: 50%;
+  right: 22%;
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  background-image: url("/kingshand.png");
+  background-size: cover;
+  cursor: pointer;
+}
+.enemyContKingsHand:hover {
+  transform: scale(1.2);
+  transition: all 0.2s;
+}
+.enemyContKingsHand:hover::after {
+  content: "King's Hand Recommended lvl: 7";
+  position: absolute;
+  bottom: -2.3rem;
+  left: -3rem;
+  width: 12rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+  color: var(--color-text);
+  font-weight: 600;
+  text-align: center;
+}
+.enemyContPyromancer {
+  bottom: 8%;
+  right: 22%;
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  background-image: url("/pyromancer.png");
+  background-size: cover;
+  cursor: pointer;
+}
+.enemyContPyromancer:hover {
+  transform: scale(1.2);
+  transition: all 0.2s;
+}
+.enemyContPyromancer:hover::after {
+  content: "Pyromancer Recommended lvl: 7";
+  position: absolute;
+  bottom: -2.3rem;
+  left: -3rem;
+  width: 12rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+  color: var(--color-text);
+  font-weight: 600;
+  text-align: center;
+}
+.enemyContBanditWarrior {
+  bottom: 10%;
+  left: 25%;
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  background-image: url("/banditwarrior.png");
+  background-size: cover;
+  cursor: pointer;
+}
+.enemyContBanditWarrior:hover {
+  transform: scale(1.2);
+  transition: all 0.2s;
+}
+.enemyContBanditWarrior:hover::after {
+  content: "Bandit Warrior Recommended lvl: 8";
+  position: absolute;
+  bottom: -2.3rem;
+  left: -3rem;
+  width: 12rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+  color: var(--color-text);
+  font-weight: 600;
+  text-align: center;
+}
+.enemyContBanditMage {
+  bottom: 10%;
+  left: 10%;
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  background-image: url("/banditmage.png");
+  background-size: cover;
+  cursor: pointer;
+}
+.enemyContBanditMage:hover {
+  transform: scale(1.2);
+  transition: all 0.2s;
+}
+.enemyContBanditMage:hover::after {
+  content: "Bandit Mage Recommended lvl: 8";
+  position: absolute;
+  bottom: -2.3rem;
+  left: -3rem;
+  width: 12rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+  color: var(--color-text);
+  font-weight: 600;
+  text-align: center;
+}
+.enemyContBanditLeader {
+  bottom: 21%;
+  left: 17.5%;
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  background-image: url("/banditleader.png");
+  background-size: cover;
+  cursor: pointer;
+}
+.enemyContBanditLeader:hover {
+  transform: scale(1.2);
+  transition: all 0.2s;
+}
+.enemyContBanditLeader:hover::after {
+  content: "Bandit Leader Recommended lvl: 9";
+  position: absolute;
+  bottom: -2.3rem;
+  left: -3rem;
+  width: 12rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+  color: var(--color-text);
+  font-weight: 600;
+  text-align: center;
+}
+.enemyContOrcBanditWarrior {
+  bottom: 34%;
+  right: 20%;
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  background-image: url("/orcbanditwarrior.png");
+  background-size: cover;
+  cursor: pointer;
+}
+.enemyContOrcBanditWarrior:hover {
+  transform: scale(1.2);
+  transition: all 0.2s;
+}
+.enemyContOrcBanditWarrior:hover::after {
+  content: "Orc Bandit Warrior Recommended lvl: 9";
+  position: absolute;
+  bottom: -2.3rem;
+  left: -3rem;
+  width: 12rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+  color: var(--color-text);
+  font-weight: 600;
+  text-align: center;
+}
+.enemyContOrcBanditMage {
+  bottom: 34%;
+  right: 35%;
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  background-image: url("/orcbanditmage.png");
+  background-size: cover;
+  cursor: pointer;
+}
+.enemyContOrcBanditMage:hover {
+  transform: scale(1.2);
+  transition: all 0.2s;
+}
+.enemyContOrcBanditMage:hover::after {
+  content: "Orc Bandit Mage Recommended lvl: 9";
+  position: absolute;
+  bottom: -2.3rem;
+  left: -3rem;
+  width: 12rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+  color: var(--color-text);
+  font-weight: 600;
+  text-align: center;
+}
+.enemyContOrcBanditLeader {
+  bottom: 45%;
+  right: 27.5%;
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  background-image: url("/orcbanditleader.png");
+  background-size: cover;
+  cursor: pointer;
+}
+.enemyContOrcBanditLeader:hover {
+  transform: scale(1.2);
+  transition: all 0.2s;
+}
+.enemyContOrcBanditLeader:hover::after {
+  content: "Orc Bandit Leader Recommended lvl: 10";
+  position: absolute;
+  bottom: -2.3rem;
+  left: -3rem;
+  width: 12rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+  color: var(--color-text);
+  font-weight: 600;
+  text-align: center;
+}
+.enemyContSpectralGuardian {
+  bottom: 46%;
+  left: 22%;
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  background-image: url("/spectralguardian.png");
+  background-size: cover;
+  cursor: pointer;
+}
+.enemyContSpectralGuardian:hover {
+  transform: scale(1.2);
+  transition: all 0.2s;
+}
+.enemyContSpectralGuardian:hover::after {
+  content: "Spectral Guardian Recommended lvl: 9";
+  position: absolute;
+  bottom: -2.3rem;
+  left: -3rem;
+  width: 12rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+  color: var(--color-text);
+  font-weight: 600;
+  text-align: center;
+}
+.enemyContFrostbornWarrior {
+  top: 20%;
+  right: 15%;
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  background-image: url("/frostbornwarrior.png");
+  background-size: cover;
+  cursor: pointer;
+}
+.enemyContFrostbornWarrior:hover {
+  transform: scale(1.2);
+  transition: all 0.2s;
+}
+.enemyContFrostbornWarrior:hover::after {
+  content: "Frostborn Warrior Recommended lvl: 10";
+  position: absolute;
+  bottom: -2.3rem;
+  left: -3rem;
+  width: 12rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+  color: var(--color-text);
+  font-weight: 600;
+  text-align: center;
+}
+.enemyContDarkMage {
+  top: 22%;
+  left: 41%;
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  background-image: url("/darkmage.png");
+  background-size: cover;
+  cursor: pointer;
+}
+.enemyContDarkMage:hover {
+  transform: scale(1.2);
+  transition: all 0.2s;
+}
+.enemyContDarkMage:hover::after {
+  content: "Dark Mage Recommended lvl: 10";
+  position: absolute;
+  bottom: -2.3rem;
+  left: -3rem;
+  width: 12rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+  color: var(--color-text);
+  font-weight: 600;
+  text-align: center;
+}
+.enemyContDarkKnight {
+  top: 7%;
+  left: 50%;
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  background-image: url("/darkknight.png");
+  background-size: cover;
+  cursor: pointer;
+}
+.enemyContDarkKnight:hover {
+  transform: scale(1.2);
+  transition: all 0.2s;
+}
+.enemyContDarkKnight:hover::after {
+  content: "Dark Knight Recommended lvl: 11";
+  position: absolute;
+  bottom: -2.3rem;
+  left: -3rem;
+  width: 12rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 0.2rem 0.4rem;
+  color: var(--color-text);
+  font-weight: 600;
+  text-align: center;
+}
+.fightButton {
+  background-color: var(--color-burgundy-dark);
+  color: var(--color-text);
+  font-size: 24px;
+  padding: 0.2rem 0.4rem;
+  font-weight: 600;
+  position: absolute;
+  top: 2rem;
+  right: -5rem;
+  cursor: pointer;
+}
+.inGameWrapper {
+  height: 100vh;
+  width: 100%;
+  background-image: url("/info-bg.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inGameContainer {
+  background-image: url(/parchment-bg-vertical.jpg);
+  background-size: cover;
+  height: 85%;
+  width: 70%;
+  box-shadow: inset 0 0 50px 5px black;
+  display: flex;
+  border-radius: 30px;
+  padding: 2rem;
+}
+.inGameAvatar {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.inGameAvatar img {
+  z-index: 999;
+  width: 100%;
+}
+.attackMenuWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  justify-content: center;
+  gap: 3rem;
+}
+.attackMenuContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.attackMenuContainer button {
+  width: 9rem;
+  height: 3.2rem;
+  cursor: pointer;
+  font-size: 32px;
+  font-weight: 600;
+  background-color: var(--color-burgundy-dark);
+  color: var(--color-text);
+  text-transform: uppercase;
+  font-family: "Jaini Purva", system-ui;
+  letter-spacing: 3px;
+  box-shadow: 0 0 5px 0 black;
+}
+.attackMenuInsideContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.attackButtonInside {
+  display: flex;
+  gap: 4px;
+  position: relative;
+}
+.attackButtonInside button {
+  font-size: 24px;
+  text-transform: capitalize;
+  cursor: pointer;
+  height: 2.4rem;
+  width: 6rem;
+  font-weight: 500;
+}
+.attackButtonInside button:hover {
+  transform: translateY(-2px);
+  transition: all 0.3s;
+  box-shadow: 0px 10px 10px 0 black;
+}
+.enemyAvatar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+.enemyAvatar img {
+  z-index: 999;
+  width: 100%;
+}
+.attackEffect {
+  background-color: red;
+  height: 19rem;
+  width: 0.8rem;
+  border-radius: 50%;
+  transform: rotate(35deg);
+  position: absolute;
+  z-index: 1000;
+}
+.attackEffect2 {
+  background-color: red;
+  height: 19rem;
+  width: 0.8rem;
+  border-radius: 50%;
+  transform: rotate(-35deg);
+  position: absolute;
+  z-index: 1000;
+}
+.characterName {
+  color: white;
+  background: radial-gradient(
+    circle at center,
+    rgb(145, 52, 52) 0%,
+    black 100%
+  );
+  font-size: 24px;
+  font-weight: 999;
+  text-shadow: 2px 2px 5px white;
+  padding: 0rem 0.6rem;
+  border-radius: 20px;
+  border: 5px white groove;
+  cursor: help;
+  position: relative;
+}
+.characterInfo {
+  color: var(--color-text);
+  position: absolute;
+  font-size: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  width: 15.5rem;
+  margin-top: 5px;
+}
+.characterName h3 {
+  font-family: "Jaini Purva", system-ui;
+  letter-spacing: 3px;
+  font-size: 36px;
+}
+.healthBarWrapper {
+  width: 50%;
+  height: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 5px white groove;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: help;
+}
+.healthText {
+  position: absolute;
+  color: var(--color-text);
+  top: -1.5rem;
+  font-weight: 600;
+  padding: 0rem 0.4rem;
+  border-radius: 5px;
+  background-color: rgba(222, 8, 8, 0.6);
+}
+.staminaText {
+  position: absolute;
+  color: var(--color-text);
+  bottom: -1.5rem;
+  font-weight: 600;
+  padding: 0rem 0.4rem;
+  border-radius: 5px;
+  background-color: rgba(11, 53, 241, 0.6);
+}
+.healthBarText {
+  position: relative;
+  z-index: 1000;
+  color: var(--color-text);
+  text-shadow: 1px 1px 5px black;
+}
+.healthBarWrapper:hover::before {
+  content: "Health Bar";
+  position: absolute;
+  top: -1.5rem;
+  text-shadow: 1px 1px 5px white;
+  padding: 0 0.4rem;
+  font-weight: 500;
+  /* font-size: larger; */
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 5px;
+  color: var(--color-text);
+  z-index: 100000;
+}
+.staminaBarWrapper {
+  width: 50%;
+  height: 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 5px white groove;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.staminaBarWrapper:hover::before {
+  content: "Stamina Bar";
+  position: absolute;
+  bottom: -1.5rem;
+  text-shadow: 1px 1px 5px white;
+  font-weight: 500;
+  /* font-size: larger; */
+  background-color: rgba(0, 0, 0, 0.9);
+  color: var(--color-text);
+  border-radius: 5px;
+  padding: 0 0.4rem;
+  z-index: 100000;
+}
+
+.attackHistoryContainer {
+  width: 100%;
+  height: 40%;
+  background-image: url("/inventory-bg-horizontal.png");
+  background-size: cover;
+  display: flex;
+  padding: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 black;
+  flex-direction: column;
+  gap: 5px;
+  overflow-y: auto;
+  position: relative;
+  z-index: 1000;
+  scrollbar-width: thin;
+  scrollbar-color: red;
+}
+
+.attackHistoryTopic {
+  width: 100%;
+  height: 12%;
+  color: var(--color-text);
+  text-align: center;
+  position: relative;
+  border-bottom: 2px groove var(--color-text);
+  text-shadow: 1px 1px 8px var(--color-text);
+  margin-bottom: 1rem;
+}
+.attackHistoryTopic h3 {
+  font-family: "Jaini Purva", system-ui;
+  letter-spacing: 3px;
+  height: 100%;
+  font-size: 26px;
+}
+.attackHistoryTopic::after {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  background-color: var(--color-burgundy-dark);
+  bottom: -0.5rem;
+  box-shadow: 0 0 10px 0 white;
+
+  right: 0;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+}
+.attackHistoryTopic::before {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  background-color: var(--color-burgundy-dark);
+  box-shadow: 0 0 10px 0 white;
+  bottom: -0.5rem;
+  left: 0;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+}
+.staminaSvg {
+  fill: rgb(11, 53, 241);
+  width: 20px;
+}
+.basicAttackButton {
+  position: relative;
+}
+.basicAttackButton:hover::before {
+  content: "-50" url(/stamina-drop.svg);
+  position: absolute;
+  fill: rgb(11, 53, 241);
+  top: 2.3rem;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--color-text);
+  background-color: rgba(231, 6, 6, 0.748);
+  border-radius: 50%;
+  padding: 0.1rem 0.5rem;
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: normal;
+}
+.strongAttackButton {
+  position: relative;
+}
+.strongAttackButton:hover::before {
+  content: "-250" url(/stamina-drop.svg);
+  position: absolute;
+  fill: rgb(11, 53, 241);
+  top: 2.3rem;
+  right: -3px;
+  width: 5rem;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--color-text);
+  background-color: rgba(231, 6, 6, 0.748);
+  border-radius: 50%;
+  padding: 0.1rem 0.5rem;
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: normal;
+}
+.crushAttackButton {
+  position: relative;
+}
+.crushAttackButton:hover::before {
+  content: "-150" url(/stamina-drop.svg);
+  position: absolute;
+  fill: rgb(11, 53, 241);
+  top: 2.3rem;
+  right: -3px;
+  width: 5rem;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--color-text);
+  background-color: rgba(231, 6, 6, 0.748);
+  border-radius: 50%;
+  padding: 0.1rem 0.5rem;
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: normal;
+}
+.notEnoughStamina {
+  backdrop-filter: none;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: -1rem;
+  left: 1rem;
+  width: 4rem;
+  background-color: rgba(231, 6, 6);
+  color: var(--color-text);
+  text-align: center;
+  padding: 0.1rem 0.3rem;
+  border-radius: 5px;
+}
+.restButton {
+  position: relative;
+}
+.restButton:hover::before {
+  content: "+30% of your missing" url(/stamina-drop.svg);
+  position: absolute;
+  fill: rgb(11, 53, 241);
+  top: 3.1rem;
+  left: -3rem;
+  width: 13rem;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-text);
+  background-color: rgba(12, 187, 12, 0.748);
+  border-radius: 5px;
+  padding: 0.1rem 0.5rem;
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: normal;
+  text-transform: lowercase;
+}
+/* .attackHistoryTopic::before {
+  content: "";
+  width: 45%;
+  height: 2px;
+  background-color: var(--color-text);
+  position: absolute;
+  left: 0;
+  top: 2rem;
+}
+.attackHistoryTopic::after {
+  content: "";
+  width: 45%;
+  height: 2px;
+  background-color: var(--color-text);
+  position: absolute;
+  right: 0;
+  top: 2rem;
+}
+.attackHistoryTopic h3 {
+  position: relative;
+}
+.attackHistoryTopic h3::after {
+  content: "";
+  width: 5%;
+  height: 10px;
+  background-color: var(--color-text);
+  position: absolute;
+
+  top: 1.8rem;
+} */
+.statusInd {
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0.2rem;
+}
+.statusInd p {
+  background-color: var(--color-burgundy-dark);
+  color: var(--color-text);
+  padding: 0.2rem;
+  border-radius: 5px;
+  max-width: fit-content;
+}
+.onWinContainer {
+  width: 35%;
+  height: 40%;
+  background-color: aliceblue;
+  position: fixed;
+  z-index: 10000;
+  box-shadow: 0 0 20px 2px black;
+  border-radius: 5px;
+  background-image: url("/info-bg.png");
+  background-size: cover;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1.5rem 1rem;
+}
+.onWinContainer h3 {
+  font-family: "Jaini Purva", system-ui;
+  font-weight: 600;
+  letter-spacing: 4px;
+  font-size: 50px;
+}
+.onWinContainer button {
+  font-size: 24px;
+  color: var(--color-text);
+  background-color: var(--color-burgundy-dark);
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 black;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  transition: all 0.5s;
+  z-index: 1000;
+}
+
+.embeddedNumberGold {
+  color: yellow;
+  text-shadow: 0 0 15px yellow;
+  font-weight: 600;
+}
+
+.embeddedNumberExp {
+  color: rgb(120, 255, 203);
+  text-shadow: 0 0 15px rgb(120, 255, 203);
+  font-weight: 600;
+}
+.spellsButtonContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.spellsButtonInside {
+  width: 100%;
+  height: fit-content;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+.spellsUl {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+.spellImg {
+  width: 3rem;
+}
+.spellImg:hover {
+  transform: translateY(-3px);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.spellInfoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  color: var(--color-burgundy-dark);
+
+  width: 11rem;
+  background-image: url(/parchment-bg2.png);
+  position: absolute;
+  bottom: -3rem;
+  left: -4rem;
+  z-index: 10000;
+  padding: 0.4rem;
+}
+.spellInfoContainer p {
+  font-weight: 600;
+}
+.lowStamina {
+  width: 20rem;
+  height: 10rem;
+  background-image: url(/info-bg.png);
+  position: absolute;
+  z-index: 100000;
+  right: -8.5rem;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  gap: 2rem;
+}
+.lowStamina p {
+  font-size: 26px;
+  font-weight: 600;
+}
+.lowStaminaTimerCont {
+  width: 80%;
+  height: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.701);
+  border: 3px white groove;
+}
+.lowStaminaTimer {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-text);
+}
+
+.animationTimerStamina {
+  animation-duration: 1200ms;
+  animation-name: animationTimer;
+  animation-timing-function: linear;
+}
+
+.crit {
+  background-color: rgb(171, 30, 30);
+  color: var(--color-text);
+  font-size: 24px;
+  text-shadow: 1px 1px 5px black;
+}
+@keyframes animationTimer {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .inGameAvatar {
+    width: 30%;
+  }
+  .inGameContainer {
+    justify-content: space-evenly;
+  }
+  .attackHistoryTopic {
+    height: 17%;
+  }
+  .attackHistoryContainer {
+    height: 45%;
+  }
+}
+@media screen and (max-width: 1450px) {
+  .inGameContainer {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .inGameContainer {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .inGameContainer {
+    width: 95%;
+  }
+}
