@@ -40,8 +40,7 @@ function HomepageInfoButtonContainer() {
         <p>
           Korcha is a web-based old-school turn-based action game which has RPG
           elements. Choose your race, create your character, defeat your
-          enemies. Currently, it only has single-player mod. Also not that it is
-          a student project who is enthusiast about web development and gaming.
+          enemies. Currently, it only has single-player mod.
         </p>
       </section>
       <section id="section-3">
