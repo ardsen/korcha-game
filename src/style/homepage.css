@@ -470,12 +470,54 @@ input {
   background-color: var(--color-text);
   height: 100%;
 }
+
 .animation-timer-level-up {
   animation-duration: 2000ms;
   animation-name: animationTimer;
   animation-timing-function: linear;
 }
-
+.dev-notes-wrapper{
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1000000;
+}
+.dev-notes-container{
+  width: 40%;
+  height: 100%;
+  background-image: url(/dirty-burgundy-bg.jpg);
+  border-radius: 5px;
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem 3rem;
+  flex-direction: column;
+  gap: 2rem;
+}
+.dev-notes-container button{
+  padding: .3rem 1rem;
+  font-size: larger;
+  background-color: var(--color-burgundy-dark);
+  color: var(--color-text);
+  cursor: pointer;
+}
+.animation-dev-notes {
+  animation-duration: 15000ms;
+  animation-name: animationDevNotes;
+  animation-timing-function: linear;
+}
+@keyframes animationDevNotes {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
 @keyframes animationTimer {
   from {
     width: 100%;

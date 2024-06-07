@@ -8,7 +8,7 @@
 .firstMap {
   width: 100%;
   height: 100%;
-  background-image: url("firstmap.png");
+  background-image: url("/firstmap.png");
   border-radius: 30px;
   border: black 10px;
   border-style: outset;
@@ -18,7 +18,7 @@
 .secondMap {
   width: 100%;
   height: 100%;
-  background-image: url("secondmap.png");
+  background-image: url("/secondmap.png");
   border-radius: 30px;
   border: black 10px;
   border-style: outset;
