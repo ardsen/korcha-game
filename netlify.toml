@@ -4,6 +4,17 @@
   status = 200
 
 [[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Type = "text/html; charset=UTF-8"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Content-Type = "application/javascript; charset=UTF-8"
+    Cache-Control = "max-age=31536000"
+
+[[headers]]
   for = "/*.js"
   [headers.values]
-    Content-Type = "application/javascript"
+    Content-Type = "application/javascript; charset=UTF-8"
