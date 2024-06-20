@@ -38,6 +38,15 @@
 .logo img {
   width: 8rem;
 }
+.logo::after {
+  content: "© 2024 Arda Şen. All Rights Reserved.";
+  position: absolute;
+  left: -2rem;
+  bottom: -2rem;
+  width: 20rem;
+  color: var(--color-text);
+  font-size: 12px;
+}
 .opacity06 {
   opacity: 0.6;
 }
@@ -476,7 +485,7 @@ input {
   animation-name: animationTimer;
   animation-timing-function: linear;
 }
-.dev-notes-wrapper{
+.dev-notes-wrapper {
   width: 100%;
   height: 30%;
   display: flex;
@@ -485,7 +494,7 @@ input {
   position: fixed;
   z-index: 1000000;
 }
-.dev-notes-container{
+.dev-notes-container {
   width: 40%;
   height: 100%;
   background-image: url(/dirty-burgundy-bg.jpg);
@@ -494,12 +503,12 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: .5rem 3rem;
+  padding: 0.5rem 3rem;
   flex-direction: column;
   gap: 2rem;
 }
-.dev-notes-container button{
-  padding: .3rem 1rem;
+.dev-notes-container button {
+  padding: 0.3rem 1rem;
   font-size: larger;
   background-color: var(--color-burgundy-dark);
   color: var(--color-text);
