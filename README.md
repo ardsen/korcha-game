@@ -2,7 +2,8 @@
 
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDlrdmkxcHJiMGR4bmJuYmYzcTFzMWVvY3ZxZW1lZDk1cDR6NjRjOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BNnEa1AGCTrUsp7nJ9/giphy.gif" width="800"/>
 
-<img src="https://imgur.com/AQRwZHl" width="800"/>
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/pRclKJX" data-context="false" ><a href="//imgur.com/a/pRclKJX"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+
 
 Korcha is an old-school turn-based browser game which I developed it to enhance my React.js skills and assess my capabilities. This project is still under development. My primary goal with this app is to implement a back-end with Node.js thus transforming it into a full-stack project.
 
