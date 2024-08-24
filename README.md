@@ -4,6 +4,6 @@ Korcha is an old-school turn-based browser game which I developed after I starte
 
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDlrdmkxcHJiMGR4bmJuYmYzcTFzMWVvY3ZxZW1lZDk1cDR6NjRjOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BNnEa1AGCTrUsp7nJ9/giphy.gif" width="800"/>
 
-<img src="https://i.imgur.com/AQRwZHl.gif" width="800"/>
+<img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExajB0dHZ2ZWFuaTczd3R0ZmYyN2dvc2dtamV4eGc5c2VuMXZkNjAybCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xtuL32sPsoG9mQlX1b/giphy-downsized-large.gif" width="800"/>
 
 <a href="https://korcha-game.vercel.app/">LIVE</a>

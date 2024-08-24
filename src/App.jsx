@@ -1,29 +1,119 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { useEffect, useState } from "react";
-import Customization from "./pages/Customization";
-import Game from "./pages/Game";
-import Homepage from "./pages/Homepage";
-import PageNotFouınd from "./pages/PageNotFouınd";
-import EnemyDirewolf from "./components/gamecomponents/EnemyDirewolf";
-import EnemyYoungApe from "./components/gamecomponents/EnemyYoungApe";
-import EnemyWhiteLion from "./components/gamecomponents/EnemyWhiteLion";
-import EnemyBarbarian from "./components/gamecomponents/EnemyBarbarian";
-import EnemyIroncladMarauder from "./components/gamecomponents/EnemyIroncladMarauder";
-import EnemyCorruptedOrc from "./components/gamecomponents/EnemyCorruptedOrc";
-import EnemyRoguePaladin from "./components/gamecomponents/EnemyRoguePaladin";
-import EnemyDesertMonster from "./components/gamecomponents/EnemyDesertMonster";
-import EnemyKingsHand from "./components/gamecomponents/EnemyKingsHand";
-import EnemyPyromancer from "./components/gamecomponents/EnemyPyromancer";
-import EnemyBanditWarrior from "./components/gamecomponents/EnemyBanditWarrior";
-import EnemyBanditMage from "./components/gamecomponents/EnemyBanditMage";
-import EnemyBanditLeader from "./components/gamecomponents/EnemyBanditLeader";
-import EnemyOrcBanditWarrior from "./components/gamecomponents/EnemyOrcBanditWarrior";
-import EnemyOrcBanditMage from "./components/gamecomponents/EnemyOrcBanditMage";
-import EnemyOrcBanditLeader from "./components/gamecomponents/EnemyOrcBanditLeader";
-import EnemySpectralGuardian from "./components/gamecomponents/EnemySpectralGuardian";
-import EnemyFrostBornWarrior from "./components/gamecomponents/EnemyFrostBornWarrior";
-import EnemyDarkMage from "./components/gamecomponents/EnemyDarkMage";
-import EnemyDarkKnight from "./components/gamecomponents/EnemyDarkKnight";
+import { lazy, Suspense, useEffect, useState } from "react";
+import Spinner from "./components/Spinner";
+// import Customization from "./pages/Customization";
+// import Game from "./pages/Game";
+// import Homepage from "./pages/Homepage";
+// import PageNotFouınd from "./pages/PageNotFouınd";
+// import EnemyDirewolf from "./components/gamecomponents/EnemyDirewolf";
+// import EnemyYoungApe from "./components/gamecomponents/EnemyYoungApe";
+// import EnemyWhiteLion from "./components/gamecomponents/EnemyWhiteLion";
+// import EnemyBarbarian from "./components/gamecomponents/EnemyBarbarian";
+// import EnemyIroncladMarauder from "./components/gamecomponents/EnemyIroncladMarauder";
+// import EnemyCorruptedOrc from "./components/gamecomponents/EnemyCorruptedOrc";
+// import EnemyRoguePaladin from "./components/gamecomponents/EnemyRoguePaladin";
+// import EnemyDesertMonster from "./components/gamecomponents/EnemyDesertMonster";
+// import EnemyKingsHand from "./components/gamecomponents/EnemyKingsHand";
+// import EnemyPyromancer from "./components/gamecomponents/EnemyPyromancer";
+// import EnemyBanditWarrior from "./components/gamecomponents/EnemyBanditWarrior";
+// import EnemyBanditMage from "./components/gamecomponents/EnemyBanditMage";
+// import EnemyBanditLeader from "./components/gamecomponents/EnemyBanditLeader";
+// import EnemyOrcBanditWarrior from "./components/gamecomponents/EnemyOrcBanditWarrior";
+// import EnemyOrcBanditMage from "./components/gamecomponents/EnemyOrcBanditMage";
+// import EnemyOrcBanditLeader from "./components/gamecomponents/EnemyOrcBanditLeader";
+// import EnemySpectralGuardian from "./components/gamecomponents/EnemySpectralGuardian";
+// import EnemyFrostBornWarrior from "./components/gamecomponents/EnemyFrostBornWarrior";
+// import EnemyDarkMage from "./components/gamecomponents/EnemyDarkMage";
+// import EnemyDarkKnight from "./components/gamecomponents/EnemyDarkKnight";
+
+const Homepage = lazy(() => import("./pages/Homepage"));
+const Customization = lazy(() => import("./pages/Customization"));
+const Game = lazy(() => import("./pages/Game"));
+const PageNotFouınd = lazy(() => import("./pages/PageNotFouınd"));
+const EnemyDirewolf = lazy(() =>
+  import("./components/gamecomponents/EnemyDirewolf")
+);
+const EnemyYoungApe = lazy(() =>
+  import("./components/gamecomponents/EnemyYoungApe")
+);
+const EnemyWhiteLion = lazy(() =>
+  import("./components/gamecomponents/EnemyWhiteLion")
+);
+const EnemyBarbarian = lazy(() =>
+  import("./components/gamecomponents/EnemyBarbarian")
+);
+const EnemyIroncladMarauder = lazy(() =>
+  import("./components/gamecomponents/EnemyIroncladMarauder")
+);
+const EnemyCorruptedOrc = lazy(() =>
+  import("./components/gamecomponents/EnemyCorruptedOrc")
+);
+const EnemyRoguePaladin = lazy(() =>
+  import("./components/gamecomponents/EnemyRoguePaladin")
+);
+const EnemyDesertMonster = lazy(() =>
+  import("./components/gamecomponents/EnemyDesertMonster")
+);
+const EnemyKingsHand = lazy(() =>
+  import("./components/gamecomponents/EnemyKingsHand")
+);
+const EnemyPyromancer = lazy(() =>
+  import("./components/gamecomponents/EnemyPyromancer")
+);
+const EnemyBanditWarrior = lazy(() =>
+  import("./components/gamecomponents/EnemyBanditWarrior")
+);
+const EnemyBanditMage = lazy(() =>
+  import("./components/gamecomponents/EnemyBanditMage")
+);
+const EnemyBanditLeader = lazy(() =>
+  import("./components/gamecomponents/EnemyBanditLeader")
+);
+const EnemyOrcBanditWarrior = lazy(() =>
+  import("./components/gamecomponents/EnemyOrcBanditWarrior")
+);
+const EnemyOrcBanditMage = lazy(() =>
+  import("./components/gamecomponents/EnemyOrcBanditMage")
+);
+const EnemyOrcBanditLeader = lazy(() =>
+  import("./components/gamecomponents/EnemyOrcBanditLeader")
+);
+const EnemySpectralGuardian = lazy(() =>
+  import("./components/gamecomponents/EnemySpectralGuardian")
+);
+const EnemyFrostBornWarrior = lazy(() =>
+  import("./components/gamecomponents/EnemyFrostBornWarrior")
+);
+const EnemyDarkMage = lazy(() =>
+  import("./components/gamecomponents/EnemyDarkMage")
+);
+const EnemyDarkKnight = lazy(() =>
+  import("./components/gamecomponents/EnemyDarkKnight")
+);
+
+/* Homepage
+Customization
+Game
+EnemyDirewolf
+EnemyYoungApe
+EnemyWhiteLion
+EnemyBarbarian
+EnemyIroncladMarauder
+EnemyCorruptedOrc
+EnemyRoguePaladin
+EnemyDesertMonster
+EnemyKingsHand
+EnemyPyromancer
+EnemyBanditWarrior
+EnemyBanditMage
+EnemyBanditLeader
+EnemyOrcBanditWarrior
+EnemyOrcBanditMage
+EnemyOrcBanditLeader
+EnemySpectralGuardian
+EnemyFrostBornWarrior
+EnemyDarkMage
+EnemyDarkKnight*/
 
 const itemList = {
   stick: {
@@ -1052,6 +1142,7 @@ const magicCityItemList = [
     damage: 3,
   },
 ];
+
 function App() {
   const [exp, setExp] = useState(0);
   const [level, setLevel] = useState(1);
@@ -1122,7 +1213,7 @@ function App() {
     },
     {
       username: "test",
-      psw: "test1234",
+      psw: "1q2w3e4r",
       hp: 5,
       end: 5,
       str: 5,
@@ -1189,360 +1280,362 @@ function App() {
   }, [exp, level]);
   return (
     <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Homepage
-              user={user}
-              currentAccount={currentAccount}
-              setCurrentAccount={setCurrentAccount}
-              setUser={setUser}
-              itemList={itemList}
-              exp={exp}
-              level={level}
-            />
-          }
-        />
-        <Route
-          path="customization"
-          element={
-            <Customization
-              currentAccount={currentAccount}
-              setCurrentAccount={setCurrentAccount}
-              itemList={itemList}
-              armorList={armorList}
-            />
-          }
-        />
-        <Route
-          path="game"
-          element={
-            <Game
-              currentAccount={currentAccount}
-              setCurrentAccount={setCurrentAccount}
-              itemList={itemList}
-              armorList={armorList}
-              blacksmithVillageItemList={blacksmithVillageItemList}
-              merchantVillageItemList={merchantVillageItemList}
-              armorshopVillageItemList={armorshopVillageItemList}
-              magicVillageItemList={magicVillageItemList}
-              blacksmithCityItemList={blacksmithCityItemList}
-              armorshopCityItemList={armorshopCityItemList}
-              magicCityItemList={magicCityItemList}
-              setLevel={setLevel}
-              setExp={setExp}
-              levelsArray={levelsArray}
-              inGameRemainStats={inGameRemainStats}
-              setInGameRemainStats={setInGameRemainStats}
-              isLevelUp={isLevelUp}
-              setIsLevelUp={setIsLevelUp}
-            />
-          }
-        />
-        <Route
-          path="direwolf"
-          element={
-            <EnemyDirewolf
-              currentAccount={currentAccount}
-              setCurrentAccount={setCurrentAccount}
-              exp={exp}
-              setExp={setExp}
-              levelsArray={levelsArray}
-              setInGameRemainStats={setInGameRemainStats}
-              inGameRemainStats={inGameRemainStats}
-              setIsLevelUp={setIsLevelUp}
-            />
-          }
-        />
-        <Route
-          path="youngape"
-          element={
-            <EnemyYoungApe
-              currentAccount={currentAccount}
-              setCurrentAccount={setCurrentAccount}
-              exp={exp}
-              setExp={setExp}
-              levelsArray={levelsArray}
-              setInGameRemainStats={setInGameRemainStats}
-              inGameRemainStats={inGameRemainStats}
-              setIsLevelUp={setIsLevelUp}
-            />
-          }
-        />
-        <Route
-          path="whitelion"
-          element={
-            <EnemyWhiteLion
-              currentAccount={currentAccount}
-              setCurrentAccount={setCurrentAccount}
-              exp={exp}
-              setExp={setExp}
-              levelsArray={levelsArray}
-              setInGameRemainStats={setInGameRemainStats}
-              inGameRemainStats={inGameRemainStats}
-              setIsLevelUp={setIsLevelUp}
-            />
-          }
-        />
-        <Route
-          path="barbarian"
-          element={
-            <EnemyBarbarian
-              currentAccount={currentAccount}
-              setCurrentAccount={setCurrentAccount}
-              exp={exp}
-              setExp={setExp}
-              levelsArray={levelsArray}
-              setInGameRemainStats={setInGameRemainStats}
-              inGameRemainStats={inGameRemainStats}
-              setIsLevelUp={setIsLevelUp}
-            />
-          }
-        />
-        <Route
-          path="ironcladmarauder"
-          element={
-            <EnemyIroncladMarauder
-              currentAccount={currentAccount}
-              setCurrentAccount={setCurrentAccount}
-              exp={exp}
-              setExp={setExp}
-              levelsArray={levelsArray}
-              setInGameRemainStats={setInGameRemainStats}
-              inGameRemainStats={inGameRemainStats}
-              setIsLevelUp={setIsLevelUp}
-            />
-          }
-        />
-        <Route
-          path="corruptedorc"
-          element={
-            <EnemyCorruptedOrc
-              currentAccount={currentAccount}
-              setCurrentAccount={setCurrentAccount}
-              exp={exp}
-              setExp={setExp}
-              levelsArray={levelsArray}
-              setInGameRemainStats={setInGameRemainStats}
-              inGameRemainStats={inGameRemainStats}
-              setIsLevelUp={setIsLevelUp}
-            />
-          }
-        />
-        <Route
-          path="roguepaladin"
-          element={
-            <EnemyRoguePaladin
-              currentAccount={currentAccount}
-              setCurrentAccount={setCurrentAccount}
-              exp={exp}
-              setExp={setExp}
-              levelsArray={levelsArray}
-              setInGameRemainStats={setInGameRemainStats}
-              inGameRemainStats={inGameRemainStats}
-              setIsLevelUp={setIsLevelUp}
-            />
-          }
-        />
-        <Route
-          path="desertmonster"
-          element={
-            <EnemyDesertMonster
-              currentAccount={currentAccount}
-              setCurrentAccount={setCurrentAccount}
-              exp={exp}
-              setExp={setExp}
-              levelsArray={levelsArray}
-              setInGameRemainStats={setInGameRemainStats}
-              inGameRemainStats={inGameRemainStats}
-              setIsLevelUp={setIsLevelUp}
-            />
-          }
-        />
-        <Route
-          path="kingshand"
-          element={
-            <EnemyKingsHand
-              currentAccount={currentAccount}
-              setCurrentAccount={setCurrentAccount}
-              exp={exp}
-              setExp={setExp}
-              levelsArray={levelsArray}
-              setInGameRemainStats={setInGameRemainStats}
-              inGameRemainStats={inGameRemainStats}
-              setIsLevelUp={setIsLevelUp}
-            />
-          }
-        />
-        <Route
-          path="pyromancer"
-          element={
-            <EnemyPyromancer
-              currentAccount={currentAccount}
-              setCurrentAccount={setCurrentAccount}
-              exp={exp}
-              setExp={setExp}
-              levelsArray={levelsArray}
-              setInGameRemainStats={setInGameRemainStats}
-              inGameRemainStats={inGameRemainStats}
-              setIsLevelUp={setIsLevelUp}
-            />
-          }
-        />
-        <Route
-          path="banditwarrior"
-          element={
-            <EnemyBanditWarrior
-              currentAccount={currentAccount}
-              setCurrentAccount={setCurrentAccount}
-              exp={exp}
-              setExp={setExp}
-              levelsArray={levelsArray}
-              setInGameRemainStats={setInGameRemainStats}
-              inGameRemainStats={inGameRemainStats}
-              setIsLevelUp={setIsLevelUp}
-            />
-          }
-        />
-        <Route
-          path="banditmage"
-          element={
-            <EnemyBanditMage
-              currentAccount={currentAccount}
-              setCurrentAccount={setCurrentAccount}
-              exp={exp}
-              setExp={setExp}
-              levelsArray={levelsArray}
-              setInGameRemainStats={setInGameRemainStats}
-              inGameRemainStats={inGameRemainStats}
-              setIsLevelUp={setIsLevelUp}
-            />
-          }
-        />
-        <Route
-          path="banditleader"
-          element={
-            <EnemyBanditLeader
-              currentAccount={currentAccount}
-              setCurrentAccount={setCurrentAccount}
-              exp={exp}
-              setExp={setExp}
-              levelsArray={levelsArray}
-              setInGameRemainStats={setInGameRemainStats}
-              inGameRemainStats={inGameRemainStats}
-              setIsLevelUp={setIsLevelUp}
-            />
-          }
-        />
-        <Route
-          path="orcbanditwarrior"
-          element={
-            <EnemyOrcBanditWarrior
-              currentAccount={currentAccount}
-              setCurrentAccount={setCurrentAccount}
-              exp={exp}
-              setExp={setExp}
-              levelsArray={levelsArray}
-              setInGameRemainStats={setInGameRemainStats}
-              inGameRemainStats={inGameRemainStats}
-              setIsLevelUp={setIsLevelUp}
-            />
-          }
-        />
-        <Route
-          path="orcbanditmage"
-          element={
-            <EnemyOrcBanditMage
-              currentAccount={currentAccount}
-              setCurrentAccount={setCurrentAccount}
-              exp={exp}
-              setExp={setExp}
-              levelsArray={levelsArray}
-              setInGameRemainStats={setInGameRemainStats}
-              inGameRemainStats={inGameRemainStats}
-              setIsLevelUp={setIsLevelUp}
-            />
-          }
-        />
-        <Route
-          path="orcbanditleader"
-          element={
-            <EnemyOrcBanditLeader
-              currentAccount={currentAccount}
-              setCurrentAccount={setCurrentAccount}
-              exp={exp}
-              setExp={setExp}
-              levelsArray={levelsArray}
-              setInGameRemainStats={setInGameRemainStats}
-              inGameRemainStats={inGameRemainStats}
-              setIsLevelUp={setIsLevelUp}
-            />
-          }
-        />
-        <Route
-          path="spectralguardian"
-          element={
-            <EnemySpectralGuardian
-              currentAccount={currentAccount}
-              setCurrentAccount={setCurrentAccount}
-              exp={exp}
-              setExp={setExp}
-              levelsArray={levelsArray}
-              setInGameRemainStats={setInGameRemainStats}
-              inGameRemainStats={inGameRemainStats}
-              setIsLevelUp={setIsLevelUp}
-            />
-          }
-        />
-        <Route
-          path="frostbornwarrior"
-          element={
-            <EnemyFrostBornWarrior
-              currentAccount={currentAccount}
-              setCurrentAccount={setCurrentAccount}
-              exp={exp}
-              setExp={setExp}
-              levelsArray={levelsArray}
-              setInGameRemainStats={setInGameRemainStats}
-              inGameRemainStats={inGameRemainStats}
-              setIsLevelUp={setIsLevelUp}
-            />
-          }
-        />
-        <Route
-          path="darkmage"
-          element={
-            <EnemyDarkMage
-              currentAccount={currentAccount}
-              setCurrentAccount={setCurrentAccount}
-              exp={exp}
-              setExp={setExp}
-              levelsArray={levelsArray}
-              setInGameRemainStats={setInGameRemainStats}
-              inGameRemainStats={inGameRemainStats}
-              setIsLevelUp={setIsLevelUp}
-            />
-          }
-        />
-        <Route
-          path="darkknight"
-          element={
-            <EnemyDarkKnight
-              currentAccount={currentAccount}
-              setCurrentAccount={setCurrentAccount}
-              exp={exp}
-              setExp={setExp}
-              levelsArray={levelsArray}
-              setInGameRemainStats={setInGameRemainStats}
-              inGameRemainStats={inGameRemainStats}
-              setIsLevelUp={setIsLevelUp}
-            />
-          }
-        />
+      <Suspense fallback={<Spinner />}>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Homepage
+                user={user}
+                currentAccount={currentAccount}
+                setCurrentAccount={setCurrentAccount}
+                setUser={setUser}
+                itemList={itemList}
+                exp={exp}
+                level={level}
+              />
+            }
+          />
+          <Route
+            path="customization"
+            element={
+              <Customization
+                currentAccount={currentAccount}
+                setCurrentAccount={setCurrentAccount}
+                itemList={itemList}
+                armorList={armorList}
+              />
+            }
+          />
+          <Route
+            path="game"
+            element={
+              <Game
+                currentAccount={currentAccount}
+                setCurrentAccount={setCurrentAccount}
+                itemList={itemList}
+                armorList={armorList}
+                blacksmithVillageItemList={blacksmithVillageItemList}
+                merchantVillageItemList={merchantVillageItemList}
+                armorshopVillageItemList={armorshopVillageItemList}
+                magicVillageItemList={magicVillageItemList}
+                blacksmithCityItemList={blacksmithCityItemList}
+                armorshopCityItemList={armorshopCityItemList}
+                magicCityItemList={magicCityItemList}
+                setLevel={setLevel}
+                setExp={setExp}
+                levelsArray={levelsArray}
+                inGameRemainStats={inGameRemainStats}
+                setInGameRemainStats={setInGameRemainStats}
+                isLevelUp={isLevelUp}
+                setIsLevelUp={setIsLevelUp}
+              />
+            }
+          />
+          <Route
+            path="direwolf"
+            element={
+              <EnemyDirewolf
+                currentAccount={currentAccount}
+                setCurrentAccount={setCurrentAccount}
+                exp={exp}
+                setExp={setExp}
+                levelsArray={levelsArray}
+                setInGameRemainStats={setInGameRemainStats}
+                inGameRemainStats={inGameRemainStats}
+                setIsLevelUp={setIsLevelUp}
+              />
+            }
+          />
+          <Route
+            path="youngape"
+            element={
+              <EnemyYoungApe
+                currentAccount={currentAccount}
+                setCurrentAccount={setCurrentAccount}
+                exp={exp}
+                setExp={setExp}
+                levelsArray={levelsArray}
+                setInGameRemainStats={setInGameRemainStats}
+                inGameRemainStats={inGameRemainStats}
+                setIsLevelUp={setIsLevelUp}
+              />
+            }
+          />
+          <Route
+            path="whitelion"
+            element={
+              <EnemyWhiteLion
+                currentAccount={currentAccount}
+                setCurrentAccount={setCurrentAccount}
+                exp={exp}
+                setExp={setExp}
+                levelsArray={levelsArray}
+                setInGameRemainStats={setInGameRemainStats}
+                inGameRemainStats={inGameRemainStats}
+                setIsLevelUp={setIsLevelUp}
+              />
+            }
+          />
+          <Route
+            path="barbarian"
+            element={
+              <EnemyBarbarian
+                currentAccount={currentAccount}
+                setCurrentAccount={setCurrentAccount}
+                exp={exp}
+                setExp={setExp}
+                levelsArray={levelsArray}
+                setInGameRemainStats={setInGameRemainStats}
+                inGameRemainStats={inGameRemainStats}
+                setIsLevelUp={setIsLevelUp}
+              />
+            }
+          />
+          <Route
+            path="ironcladmarauder"
+            element={
+              <EnemyIroncladMarauder
+                currentAccount={currentAccount}
+                setCurrentAccount={setCurrentAccount}
+                exp={exp}
+                setExp={setExp}
+                levelsArray={levelsArray}
+                setInGameRemainStats={setInGameRemainStats}
+                inGameRemainStats={inGameRemainStats}
+                setIsLevelUp={setIsLevelUp}
+              />
+            }
+          />
+          <Route
+            path="corruptedorc"
+            element={
+              <EnemyCorruptedOrc
+                currentAccount={currentAccount}
+                setCurrentAccount={setCurrentAccount}
+                exp={exp}
+                setExp={setExp}
+                levelsArray={levelsArray}
+                setInGameRemainStats={setInGameRemainStats}
+                inGameRemainStats={inGameRemainStats}
+                setIsLevelUp={setIsLevelUp}
+              />
+            }
+          />
+          <Route
+            path="roguepaladin"
+            element={
+              <EnemyRoguePaladin
+                currentAccount={currentAccount}
+                setCurrentAccount={setCurrentAccount}
+                exp={exp}
+                setExp={setExp}
+                levelsArray={levelsArray}
+                setInGameRemainStats={setInGameRemainStats}
+                inGameRemainStats={inGameRemainStats}
+                setIsLevelUp={setIsLevelUp}
+              />
+            }
+          />
+          <Route
+            path="desertmonster"
+            element={
+              <EnemyDesertMonster
+                currentAccount={currentAccount}
+                setCurrentAccount={setCurrentAccount}
+                exp={exp}
+                setExp={setExp}
+                levelsArray={levelsArray}
+                setInGameRemainStats={setInGameRemainStats}
+                inGameRemainStats={inGameRemainStats}
+                setIsLevelUp={setIsLevelUp}
+              />
+            }
+          />
+          <Route
+            path="kingshand"
+            element={
+              <EnemyKingsHand
+                currentAccount={currentAccount}
+                setCurrentAccount={setCurrentAccount}
+                exp={exp}
+                setExp={setExp}
+                levelsArray={levelsArray}
+                setInGameRemainStats={setInGameRemainStats}
+                inGameRemainStats={inGameRemainStats}
+                setIsLevelUp={setIsLevelUp}
+              />
+            }
+          />
+          <Route
+            path="pyromancer"
+            element={
+              <EnemyPyromancer
+                currentAccount={currentAccount}
+                setCurrentAccount={setCurrentAccount}
+                exp={exp}
+                setExp={setExp}
+                levelsArray={levelsArray}
+                setInGameRemainStats={setInGameRemainStats}
+                inGameRemainStats={inGameRemainStats}
+                setIsLevelUp={setIsLevelUp}
+              />
+            }
+          />
+          <Route
+            path="banditwarrior"
+            element={
+              <EnemyBanditWarrior
+                currentAccount={currentAccount}
+                setCurrentAccount={setCurrentAccount}
+                exp={exp}
+                setExp={setExp}
+                levelsArray={levelsArray}
+                setInGameRemainStats={setInGameRemainStats}
+                inGameRemainStats={inGameRemainStats}
+                setIsLevelUp={setIsLevelUp}
+              />
+            }
+          />
+          <Route
+            path="banditmage"
+            element={
+              <EnemyBanditMage
+                currentAccount={currentAccount}
+                setCurrentAccount={setCurrentAccount}
+                exp={exp}
+                setExp={setExp}
+                levelsArray={levelsArray}
+                setInGameRemainStats={setInGameRemainStats}
+                inGameRemainStats={inGameRemainStats}
+                setIsLevelUp={setIsLevelUp}
+              />
+            }
+          />
+          <Route
+            path="banditleader"
+            element={
+              <EnemyBanditLeader
+                currentAccount={currentAccount}
+                setCurrentAccount={setCurrentAccount}
+                exp={exp}
+                setExp={setExp}
+                levelsArray={levelsArray}
+                setInGameRemainStats={setInGameRemainStats}
+                inGameRemainStats={inGameRemainStats}
+                setIsLevelUp={setIsLevelUp}
+              />
+            }
+          />
+          <Route
+            path="orcbanditwarrior"
+            element={
+              <EnemyOrcBanditWarrior
+                currentAccount={currentAccount}
+                setCurrentAccount={setCurrentAccount}
+                exp={exp}
+                setExp={setExp}
+                levelsArray={levelsArray}
+                setInGameRemainStats={setInGameRemainStats}
+                inGameRemainStats={inGameRemainStats}
+                setIsLevelUp={setIsLevelUp}
+              />
+            }
+          />
+          <Route
+            path="orcbanditmage"
+            element={
+              <EnemyOrcBanditMage
+                currentAccount={currentAccount}
+                setCurrentAccount={setCurrentAccount}
+                exp={exp}
+                setExp={setExp}
+                levelsArray={levelsArray}
+                setInGameRemainStats={setInGameRemainStats}
+                inGameRemainStats={inGameRemainStats}
+                setIsLevelUp={setIsLevelUp}
+              />
+            }
+          />
+          <Route
+            path="orcbanditleader"
+            element={
+              <EnemyOrcBanditLeader
+                currentAccount={currentAccount}
+                setCurrentAccount={setCurrentAccount}
+                exp={exp}
+                setExp={setExp}
+                levelsArray={levelsArray}
+                setInGameRemainStats={setInGameRemainStats}
+                inGameRemainStats={inGameRemainStats}
+                setIsLevelUp={setIsLevelUp}
+              />
+            }
+          />
+          <Route
+            path="spectralguardian"
+            element={
+              <EnemySpectralGuardian
+                currentAccount={currentAccount}
+                setCurrentAccount={setCurrentAccount}
+                exp={exp}
+                setExp={setExp}
+                levelsArray={levelsArray}
+                setInGameRemainStats={setInGameRemainStats}
+                inGameRemainStats={inGameRemainStats}
+                setIsLevelUp={setIsLevelUp}
+              />
+            }
+          />
+          <Route
+            path="frostbornwarrior"
+            element={
+              <EnemyFrostBornWarrior
+                currentAccount={currentAccount}
+                setCurrentAccount={setCurrentAccount}
+                exp={exp}
+                setExp={setExp}
+                levelsArray={levelsArray}
+                setInGameRemainStats={setInGameRemainStats}
+                inGameRemainStats={inGameRemainStats}
+                setIsLevelUp={setIsLevelUp}
+              />
+            }
+          />
+          <Route
+            path="darkmage"
+            element={
+              <EnemyDarkMage
+                currentAccount={currentAccount}
+                setCurrentAccount={setCurrentAccount}
+                exp={exp}
+                setExp={setExp}
+                levelsArray={levelsArray}
+                setInGameRemainStats={setInGameRemainStats}
+                inGameRemainStats={inGameRemainStats}
+                setIsLevelUp={setIsLevelUp}
+              />
+            }
+          />
+          <Route
+            path="darkknight"
+            element={
+              <EnemyDarkKnight
+                currentAccount={currentAccount}
+                setCurrentAccount={setCurrentAccount}
+                exp={exp}
+                setExp={setExp}
+                levelsArray={levelsArray}
+                setInGameRemainStats={setInGameRemainStats}
+                inGameRemainStats={inGameRemainStats}
+                setIsLevelUp={setIsLevelUp}
+              />
+            }
+          />
 
-        <Route path="*" element={<PageNotFouınd />} />
-      </Routes>
+          <Route path="*" element={<PageNotFouınd />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }
